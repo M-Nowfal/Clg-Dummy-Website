@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  scroll-margin: 80px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 0 0 7px 7px;
+  background-color: #004080;
+  color: aliceblue;
+}
+
+.header>nav {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.header>nav>a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.titles {
+  font-size: 50px;
+  text-align: center;
+  margin: 10px 0;
+  background: linear-gradient(to right, rgb(255, 0, 221), rgb(0, 45, 75));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sections {
+  padding: 10px;
+  margin: 7px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.divider {
+  padding: 0 20px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.divider p {
+  line-height: 20px;
+  font-size: small;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.divide {
+  height: 2px;
+  background-color: #004080;
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+}
+
+@media (max-width: 700px) {
+  #departments {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 701px) {
+  .sections {
+    margin: 20px 10px;
+  }
+
+  #departments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+.card {
+  border-radius: 10px;
+  border-left: #004080 solid 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  padding: 30px;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-indent: 50px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.dep-title {
+  color: rgb(0, 30, 85);
+  margin-bottom: 10px;
+}
+
+.dep {
+  margin-bottom: 5px;
+}
+
+.dep a {
+  text-decoration: none;
+  color: black;
+}
+
+#faculties {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.staff {
+  margin-bottom: 15px;
+}
+
+.staff-about {
+  color: rgb(70, 70, 70);
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#future-goal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.future-title {
+  color: rgb(0, 30, 85);
+  margin-bottom: 10px;
+}
+
+#footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #004080;
+  color: aliceblue;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 30px;
+}
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/M-Nowfal/Clg-Dummy-Website.git
+git push -u origin main
