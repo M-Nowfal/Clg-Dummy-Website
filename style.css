@@ -166,3 +166,15 @@
   text-align: center;
   line-height: 30px;
 }
+
+.video-container {
+  text-align: center;
+}
+
+.kanagraj-video {
+  border-radius: 20px;
+  border: solid 1px gray;
+  box-shadow: 0px 2px 10px gray;
+  width: 90%;
+  margin: auto;
+}

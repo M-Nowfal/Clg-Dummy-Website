@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Department Faculties</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="bg-sky-800 py-7">
+    <h1 class="text-center text-4xl text-white font-semibold">Computer Science Department Faculties</h1>
+  </header>
+  <section id="faculties" class="grid sm:grid-cols-2 md:grid-cols-4 gap-7 my-10 mx-5"></section>
+  <div class="text-center mb-5">
+    <button class="bg-sky-800 shadow-lg cursor-pointer text-white font-bold py-2 px-7 rounded-xl mt-5 animate-bounce"
+      onclick="history.back()"
+    >Back</button>
+  </div>
+  <footer class="bg-sky-800 text-white text-center p-5">
+    &copy; 2025 GAC Coimbatore | Department of Computer Science
+  </footer>
+  <script>
+    const faculty_members = [
+      {
+        name: "Dr.L.ROBERT",
+        img: "Dr.L.ROBERT.jpg",
+        desig: "Associate Professor & Head",
+        qual: "M.Sc., M.Phil.,Ph.D",
+        area_of_rd: "Data Compression"
+      },
+      {
+        name: "Dr.S.CHITRA",
+        img: "Dr.S.CHITRA.jpg",
+        desig: "Associate Professor",
+        qual: "M.Sc., Ph.D",
+        area_of_rd: "Data Mining and Web Mining"
+      },
+      {
+        name: "Dr.M.DEVAPRIYA",
+        img: "Dr.M.DEVIPRIYA.jpg",
+        desig: "Associate Professor",
+        qual: "M.Sc., M.Phil.,Ph.D",
+        area_of_rd: "Image Processing and Computer Network"
+      },
+      {
+        name: "Dr.K.SARASWATHI",
+        img: "SARASWATHI.jpg",
+        desig: "Associate Professor",
+        qual: "MCA., M.Phil.,Ph.D",
+        area_of_rd: "Network security and biometrics"
+      },
+      {
+        name: "Dr.A.MALATHI",
+        img: "MALATHY.jpg",
+        desig: "Associate Professor",
+        qual: "M.Sc., M.Phil.,Ph.D",
+        area_of_rd: "Data Mining and WareHousing and Big Data"
+      },
+      {
+        name: "Dr.P.BALAMURUGAN",
+        img: "Dr.P.BALAMURUGAN.jpg",
+        desig: "Associate Professor",
+        qual: "M.Sc., M.Phil.,Ph.D",
+        area_of_rd: "Digital Image Processing"
+      },
+      {
+        name: "V.B.BUVANESWARI",
+        img: "V.B.BUVANESWARI.jpg",
+        desig: "Assistant Professor",
+        qual: "M.Sc., M.Phil., M.E",
+        area_of_rd: "Service Oriented Architecture, Machine Learning"
+      },
+      {
+        name: "Dr.S.K. MAHENDRAN",
+        img: "Dr.S.K.%20MAHENDRAN.jpg",
+        desig: "Assistant Professor",
+        qual: "MCA, M.Phil(CS), Ph.D",
+        area_of_rd: "Image Processing, Data Mining and Networking"
+      },
+      {
+        name: "Mr. S.YUVARAJ",
+        img: "IMG-20230822-WA0004.jpg",
+        desig: "Guest Lecturer",
+        qual: "M.C.A., M.Phil., (Ph.D)",
+        area_of_rd: "Network Security"
+      },
+      {
+        name: "D.RAJASEKAR",
+        img: "rajasekar.jpg",
+        desig: "Guest Lecturer",
+        qual: "M.C.A., M.Phil., (Ph.D)",
+        area_of_rd: "Network Security"
+      },
+      {
+        name: "N.K.RATHIKA",
+        img: "rathika.jpg",
+        desig: "Guest Lecturer",
+        qual: "M.C.A., NET. (Ph.D.)",
+        area_of_rd: "Data Mining"
+      },
+      {
+        name: "R ANBAZHAGAN",
+        img: "anbu.jpg",
+        desig: "Guest Lecturer",
+        qual: "M.Sc., M.phil., NET., (Ph.D.)",
+        area_of_rd: "Computer networks and Neural Networks"
+      }
+    ];
+    
+    for (let i = 0; i < faculty_members.length; i++) {
+      document.getElementById("faculties").innerHTML += `
+        <div class="rounded-xl border-l-4 border border-l-emerald-600 shadow-xl p-5 hover:shadow-2xl hover:scale-105 transition-all duration-200">
+          <h1 class="text-center font-bold text-xl mb-4">${faculty_members[i].name}</h1>
+          <div class="flex gap-4">
+            <div class="flex items-center border-r-4 pe-4 border-r-sky-800">
+              <img 
+                src="https://gacbe.ac.in/images/departments/science/cs/faculty/${faculty_members[i].img}" 
+                alt="${faculty_members[i].name}"
+                class="rounded-lg object-center object-contain"
+                width="200"
+              >
+            </div>
+            <div class="flex flex-col gap-2 justify-between">
+              <div class="flex gap-2">
+                <h3 class="font-semibold">Designation</h3>
+                <p>${faculty_members[i].desig}</p>  
+              </div>
+              <div class="flex gap-2 justify-between">
+                <h3 class="font-semibold">Qualification</h3>
+                <p>${faculty_members[i].qual}</p>  
+              </div>
+              <div class="flex gap-2 justify-between">
+                <h3 class="font-semibold">Areas of Research Interest</h3>
+                <p>${faculty_members[i].area_of_rd}</p>  
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+
+</html>
